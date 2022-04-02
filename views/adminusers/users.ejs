@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/linksSidebar'); %>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>User MAINTENANCE Page</title>
+    <link rel="stylesheet" href="/style/admin.css" />
+  </head>
+
+  <body>
+    <%- include('../partials/menuSidebar'); %>
+    <div class="home_content">
+      <main>
+        <h1 class="header" style = "text-align: center;">ADMIN AREA</h1>
+        <div class="insights">
+          <div class="firstdiv">
+            <i class="material-icons">person</i>
+            <div class="middle">
+              <div class="left">
+                <a href="/adminusers"><h1>Users:</h1></a>
+                <a href="/adminusers"><h2><%= normalUserData.length %></h2></a>
+              </div>
+            </div>
+          </div>
+          <div class="seconddiv">
+            <i class="material-icons">admin_panel_settings</i>
+
+            <div class="middle">
+              <div class="left">
+                <a href="/adminusers/admins"><h1>Admins:</h1></a>
+                <a href="/adminusers/admins"
+                  ><h2><%= adminUserData.length %></h2></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="thirddiv">
+            <i class="material-icons">audiotrack</i>
+
+            <div class="middle">
+              <div class="left">
+                <a href="/adminsongs"><h3>Switch Table</h3></a>
+                <a href="/adminsongs"><h1>Music Admin</h1></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% if(mode === 'users') { %>
+        <div class="maintable">
+          <h2 class = "subheading">USERS LIST</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>NAME</th>
+                <th>STATUS</th>
+                <th>ACTION</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(normalUserData.length!=0){ var i=1;
+              normalUserData.forEach(function(data){ %>
+              <tr>
+                <td><%=data.id%></td>
+                <td><%=data.email%></td>
+                <td><%=data.name %></td>
+                <td class="warning">not admin</td>
+                <td class="danger">
+                  <button>
+                    <a
+                      class="btn edit"
+                      href="../adminusers/makeadmin/<%=data.id%>"
+                      >Make ADMIN</a
+                    >
+                  </button>
+                </td>
+              </tr>
+              <% i++; }) %> <% } else{ %>
+              <tr>
+                <td colspan="7">No Data Found</td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        <% } %> <% if(mode === 'admins') { %>
+        <div class="maintable">
+          <h2>ADMINS LIST</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>NAME</th>
+                <th>STATUS</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(adminUserData.length!=0){ var i=1;
+              adminUserData.forEach(function(data){ %>
+              <tr>
+                <td><%=data.id%></td>
+                <td><%=data.email%></td>
+                <td><%=data.name %></td>
+                <td class="warning">admin</td>
+              </tr>
+              <% i++; }) %> <% } else{ %>
+              <tr>
+                <td colspan="7">No Data Found</td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        <% } %>
+      </main>
+    </div>
+
+    <!-- <h1 style="text-align: center">USERS</h1>
+    <div class="table-data">
+      <h3 style="color: white">ADMIN USERS</h3>
+      <br />
+      <table border="1" class = "styled-table">
+        <tr class = "active-row">
+          <th>ID</th>
+          <th>Email</th>
+          <th>Name</th>
+        </tr>
+
+        <% if(adminUserData.length!=0){ var i=1;
+        adminUserData.forEach(function(data){ %>
+        <tr>
+          <td style="color: white"><%=data.id%></td>
+          <td style="color: white"><%=data.email%></td>
+          <td style="color: white"><%=data.name %></td>
+        </tr>
+        <% i++; }) %> <% } else{ %>
+        <tr>
+          <td colspan="7">No Data Found</td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+    <div class="table-data">
+      <h3 style="color: white">NORMAL USERS</h3>
+      <br />
+      <table border="1" class = "styled-table">
+        <tr class = "active-row">
+          <th>id</th>
+          <th>email</th>
+          <th>name</th>
+          <th>Upgrading User</th>
+        </tr>
+
+        <% if(normalUserData.length!=0){ var i=1;
+        normalUserData.forEach(function(data){ %>
+        <tr>
+          <td style="color: white"><%=data.id%></td>
+          <td style="color: white"><%=data.email%></td>
+          <td style="color: white"><%=data.name %></td>
+          <td style="color: white">
+            <a
+              class="btn btn-success edit"
+              href="../adminusers/makeadmin/<%=data.id%>"
+              >Make ADMIN</a
+            >
+          </td>
+        </tr>
+        <% i++; }) %> <% } else{ %>
+        <tr>
+          <td colspan="7">No Data Found</td>
+        </tr>
+        <% } %>
+      </table>
+    </div> -->
+  </body>
+</html>

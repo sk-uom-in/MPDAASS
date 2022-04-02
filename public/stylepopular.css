@@ -1,0 +1,104 @@
+.styled-table {
+  position: relative;
+  float: left;
+  margin: 25px 60px 25px 20px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 600px;
+  max-width: 1300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-collapse: collapse;
+  border-color: #563d7c;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rock {
+  float: right;
+  margin: -20px 0;
+}
+
+.pop {
+  float: right;
+  margin: -20px 0;
+}
+
+.hiphop {
+  float: right;
+  margin: -20px 0;
+}
+
+h1 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+h3 {
+  font-size: 2rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.styled-table tr:hover td{
+  color: darkred;
+}
+
+.styled-table thead tr {
+  background-color: white;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}
+
+.styled-table td{
+  color: white;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #1c819e;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #005874;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}
+
+.styled-table tbody tr:last-of:type {
+  border-bottom: 2px solid #009879;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  font-style: italic;
+  background-color: #dc2f2f;
+  border-collapse: collapse;
+  border-color: #563d7c;
+}

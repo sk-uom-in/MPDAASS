@@ -1,0 +1,35 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "ejs": "3.1.6",
+    "express": "^4.17.2",
+    "express-flash": "0.0.2",
+    "express-session": "1.17.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "3.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "2.3.3",
+    "nodemon": "^2.0.15",
+    "passport": "0.5.2",
+    "passport-local": "1.0.0",
+    "pg-promise": "10.11.1"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
+}

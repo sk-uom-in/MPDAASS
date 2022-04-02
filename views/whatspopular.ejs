@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/linksSidebar'); %>
+    <title>WhatsPopular Page</title>
+    <link rel="stylesheet" href="/stylepopular.css" />
+  </head>
+  <body>
+    <%- include('./partials/menuSidebar'); %>
+    <div class="home_content">
+      <br />
+      <br />
+      <h1 style="text-align: center">HOT SONGS</h1>
+      <br />
+      <br />
+      <br />
+      <div class="table-data">
+        <h3 style="color: white">ROCK SONGS (TOP 5)</h3>
+        <br />
+        <table
+          id="rocktable"
+          border="1"
+          class="styled-table"
+          style="text-align: center"
+        >
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Artist</th>
+            <!--           <th style="color: black">Genre</th> -->
+            <th style="color: black">Rating</th>
+          </tr>
+
+          <% if(songDataRock.length){ %> <% for(var i = 0; i< 5; i++) { %>
+          <tr>
+            <td><%=songDataRock[i].song%></td>
+            <td><%=songDataRock[i].name%></td>
+            <td><%=songDataRock[i].rating %></td>
+          </tr>
+          <% } }else{ %>
+          <tr>
+            <td colspan="7">No Data Found</td>
+          </tr>
+          <% } %>
+        </table>
+        <div class="parent">
+          <img
+            src="images/rock.jpg"
+            alt="rocksongs"
+            id="rock"
+            width="411"
+            height="275"
+          />
+        </div>
+        <br /><br /><br /><br />
+        <h3>POP SONGS (TOP 5)</h3>
+        <br />
+        <table border="1" class="styled-table">
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Artist</th>
+            <!--           <th style="color: black">Genre</th> -->
+            <th style="color: black">Rating</th>
+          </tr>
+          <% if(songDataPop.length){ %> <% for(var i = 0; i< 5; i++) { %>
+          <tr>
+            <td><%=songDataPop[i].song%></td>
+            <td><%=songDataPop[i].name%></td>
+            <td><%=songDataPop[i].rating %></td>
+          </tr>
+          <% } }else{ %>
+          <tr>
+            <td colspan="7">No Data Found</td>
+          </tr>
+          <% } %>
+        </table>
+        <div class="parent">
+          <img
+            src="images/pop.jpg"
+            alt="popsongs"
+            id="pop"
+            width="411"
+            height="275"
+          />
+        </div>
+        <br /><br /><br /><br />
+        <h3>HIP HOP SONGS (TOP 5)</h3>
+        <br />
+        <table border="1" class="styled-table">
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Artist</th>
+            <!--           <th style="color: black">Genre</th> -->
+            <th style="color: black">Rating</th>
+          </tr>
+          <% if(songDataHiphop.length){ %> <% for(var i = 0; i< 5; i++) { %>
+          <tr>
+            <td><%=songDataHiphop[i].song%></td>
+            <td><%=songDataHiphop[i].name%></td>
+            <td><%=songDataHiphop[i].rating %></td>
+          </tr>
+          <% } }else{ %>
+          <tr>
+            <td colspan="7">No Data Found</td>
+          </tr>
+          <% } %>
+        </table>
+        <div class="parent">
+          <img
+            src="images/hiphop.jpg"
+            alt="hiphopsongs"
+            id="hiphop"
+            width="411"
+            height="275"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

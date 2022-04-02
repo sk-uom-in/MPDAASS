@@ -1,0 +1,358 @@
+:root{
+    --color-primary:#7380ec;
+    --color-danger:#ff7782;
+    --color-success: #41f1b6;
+    --color-warning:#ffbb55;
+    --color-white:#fff;
+    --color-info-dark:#7d8da1;
+    --color-info-light:#dce1eb;
+    --color-dark:#2c3557;
+    --color-light:rgba(253, 253, 253, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant:#677483;
+    --color-background: #f6f6f6;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0rem 0rem 3rem #000;
+
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+   
+    margin-bottom: 20rem;
+
+}
+
+a{
+    color: #fff;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--color-info-light)
+}
+
+.header {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.subheading {
+  font-size: 2rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+main .header{
+    padding: 2rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    color: var(--color-info-light);
+    padding-bottom: 1rem;
+    color:#fff;
+}
+
+h3{
+    font-size: 0.87rem;
+    color: #fff;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+
+.text-muted{
+color: var(--color-info-light);
+}
+
+
+p{
+    color: var(--color-light);
+}
+
+b{
+    color: var(--color-light);
+}
+
+.primary{
+    color: var(--color-primary)
+}
+.danger{
+    color: var(--color-danger)
+}
+
+.success{
+    color: var(--color-success);
+}
+
+main{
+    margin-top: 1.4rem;
+    padding-bottom: 5%;
+   
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    transition: 0.9s 0.8s ease-in-out;
+}
+main .insights h1{
+    padding-top: 1rem;
+}
+main .insights h2{
+    padding-top: 1rem;
+   
+}
+
+
+main .insights > div{
+    background: #2b85b8;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    width: 80%;
+
+    height: 200px;
+    justify-self: center;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+    
+}
+main .insights > div i{
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-dark);
+    font-size: 2rem;
+}
+
+main .insights > div.seconddiv i{
+    background: var(--color-danger);
+}
+
+main .insights > div.thirddiv i{
+    background: var(--color-success);
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+
+main .maintable{
+    margin-top: 4rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+
+
+}
+
+main .maintable h2{
+    margin-bottom: 0.8rem;
+}
+
+main .maintable table{
+    background: #282434;
+    width:100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+/* main .maintable table:hover{
+    box-shadow: none;
+} */
+
+main table tbody td {
+    height: 4rem;
+    border-bottom: 1px solid var(--color-dark);
+    color: #fff;
+    font-size: 16px;
+}
+main table tbody th {
+    height: 4rem;
+    border-bottom: 1px solid var(--color-dark);
+    color: #fff;
+    font-size: 16px;
+}
+main table thead th{
+    color: #fff;
+    font-size: 18px;
+    font: bold;
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+main table tbody tr:last-child th{
+    border: none;
+}
+
+main .maintable a{
+    text-align: center;
+    display:block;
+    margin: 1rem auto;
+}
+
+main .maintable button{
+    font-size: 1rem;
+    background-color: #2b85b8;
+    padding: 5px 5px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+main .maintable button:hover{
+    background:#22678f;
+    transition: all 0.35s;
+ 
+    }
+
+main .maintable button a{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1100px){
+    main .insights{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        transition: 0.9s 0.8s ease-in-out;
+    }
+   main .maintable{
+    margin-top: 4rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    transition: 0.9s 0.8s ease-in-out;
+
+}
+
+   
+
+}
+
+@media screen and (max-width:786px){
+  
+    main .insights{
+        display: grid;
+         transition: 2s ease-in-out;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        
+
+    }
+   main .maintable{
+       position: relative;
+        margin: 3rem 3 0 0;
+        width: 90%;
+}
+   main .maintable table{
+       width: 90%;
+       margin: 0;
+   }
+
+}
+@media screen and (max-width:660px){
+
+    main .insights{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        transition: 0.9s 0.8s ease-in-out;
+
+    }
+   main .maintable{
+     opacity: 0;
+}
+  
+
+}

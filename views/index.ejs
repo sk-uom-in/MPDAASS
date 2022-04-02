@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/linksSidebar'); %>
+    <title>MP.DASS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('./partials/menuSidebar'); %> -->
+     <div class="home_content">
+      <div class="main">
+        <div class="main__container">
+          <div class="main__content">
+            <h1>WELCOME TO </h1>
+            <h2> MPDASS '<b><%= user.name %>'</b></h2>
+            <p>Find your music.</p>
+            <button class="main__btn"><a href="./quiz/form">Take Quiz</a></button>
+            </div>
+          <div class="main__img--container">
+            <img src="images/banner.svg" alt="pic" id="main__img">
+          </div>
+        </div>
+      </div>
+ <div class="services">
+  <br /><br /><br /> <br /><br /> <br /><br /> <br /><br />
+   <h1>WHAT NEXT?</h1>
+   <div class="services__container">
+     <div class="services__card">
+       <h2>The Most Popular</h2>
+       <p>Find the most popular music</p>
+       <form method="get" action="/whatspopular">
+        <button>What's Popular</button>
+      </form>
+     </div>
+     <div class="services__card">
+      <h2>Your Music</h2>
+      <p>Find the result of your quiz</p>
+      <form method="get" action="/yourmusic">
+        <button>Quiz Result</button>
+      </div>
+      </div>
+      </div>
+      <!-- footer -->
+      <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Learn More</h2>
+              <a href="/about">About us</a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">FIRST YEAR PROJECT  2022</p>
+      </div>
+      
+</body>
+</html>

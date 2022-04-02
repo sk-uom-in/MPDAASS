@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="/style/form.css" />
+    <title>Upgrading User</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    /> -->
+  </head>
+  <body>
+    <h1>Admin Updating</h1>
+
+    <div class="card">
+      <div class="card-header">
+        Upgrading <b><%= name %></b> with email <b><%= email %></b> and id
+        <b><%= id %></b> to ADMIN
+      </div>
+      <div class="card-body">
+        <form action="/adminusers/upgrade/<%= id %>" method="post">
+          <div class="form-group">
+            <input
+              type="hidden"
+              name="name"
+              class="form-control"
+              value="<%= name %>"
+            />
+          </div>
+          <% if (messages.error) { %>
+          <div class="alert alert-danger" role="alert">
+            <%- messages.error %>
+          </div>
+          <% } %>
+          <div class="form-group">
+            <input
+              type="hidden"
+              name="email"
+              class="form-control"
+              value="<%= email %>"
+            />
+          </div>
+          <div class="form-group">
+            <label>Role:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="role"
+              placeholder="<%= role %>"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <label>Type '<b>admin</b>' to upgrade user</label>
+          </div>
+          <div class="form-group">
+            <button>
+              <input type="submit" class="btn btn-info" value="Update" />
+            </button>
+          </div>
+        </form>
+        <form action="/adminusers" method="get">
+          <button>
+            <input type="submit" class="btn btn-danger" value="Cancel" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

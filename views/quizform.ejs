@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="styleQuiz.css" rel="stylesheet" />
+    <!-- <script defer src="script.js"></script> -->
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+        <!-- <div id="question-container" class=""> -->
+          <!-- <div id="question"><%= JSON.stringify(options[0].Ques).replace(/['"]+/g, '')%></div> -->
+          <!-- <div id="answer-buttons" class="btn-grid"> -->
+            
+            <!-- <button class="btn"><%= JSON.stringify(options[0].Op1).replace(/['"]+/g, '')%></button>  JSON string needs to be sent to script file and from there... -->
+            <!-- <button class="btn"><%= JSON.stringify(options[0].Op2).replace(/['"]+/g, '')%></button>  ... is where we should be putting the questions and answers in... -->
+            <!-- <button class="btn"><%= JSON.stringify(options[0].Op3).replace(/['"]+/g, '')%></button>  ... around line 97 using getElemntById -->
+            <!-- <button class="btn"><%= JSON.stringify(options[0].Op4).replace(/['"]+/g, '')%></button> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+    <form action="/quiz/form1" method="post">
+           <div class="exp">
+              <p><%= JSON.stringify(options[0].Ques).replace(/['"]+/g, '')%></p>
+                  <input type="radio" id="Op11" name="question1" required="required" value=<%= JSON.stringify(options[0].Op1).replace(/['"]+/g, '')%>>
+                     <label  for="Op11"><%= JSON.stringify(options[0].Op1).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op12" name="question1" value=<%= JSON.stringify(options[0].Op2).replace(/['"]+/g, '')%>>
+                     <label for="Op12"><%= JSON.stringify(options[0].Op2).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op13" name="question1" value=<%= JSON.stringify(options[0].Op3).replace(/['"]+/g, '')%>>
+                     <label for="Op13"><%= JSON.stringify(options[0].Op3).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op14" name="question1" value=<%= JSON.stringify(options[0].Op4).replace(/['"]+/g, '')%>>
+                     <label for="Op14"><%= JSON.stringify(options[0].Op4).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op15" name="question1" value=<%= JSON.stringify(options[0].Op5).replace(/['"]+/g, '')%>>
+                     <label for="Op15"><%= JSON.stringify(options[0].Op5).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op16" name="question1" value=<%= JSON.stringify(options[0].Op6).replace(/['"]+/g, '')%>>
+                     <label for="Op16"><%= JSON.stringify(options[0].Op6).replace(/['"]+/g, '')%></label><br>
+
+           </div>
+           <div class="exp">
+              <p><%= JSON.stringify(options2[0].Ques).replace(/['"]+/g, '')%></p>
+                  <input type="radio" id="Op21" name="question2" required="required" value=<%= JSON.stringify(options2[0].Op1).replace(/['"]+/g, '')%>>
+                     <label for="Op21"><%= JSON.stringify(options2[0].Op1).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op22" name="question2" value=<%= JSON.stringify(options2[0].Op2).replace(/['"]+/g, '')%>>
+                     <label for="Op22"><%= JSON.stringify(options2[0].Op2).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op23" name="question2" value=<%= JSON.stringify(options2[0].Op3).replace(/['"]+/g, '')%>>
+                     <label for="Op23"><%= JSON.stringify(options2[0].Op3).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op24" name="question2" value=<%= JSON.stringify(options2[0].Op4).replace(/['"]+/g, '')%>>
+                     <label for="Op24"><%= JSON.stringify(options2[0].Op4).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op25" name="question2" value=<%= JSON.stringify(options2[0].Op5).replace(/['"]+/g, '')%>>
+                     <label for="Op25"><%= JSON.stringify(options2[0].Op5).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op26" name="question2" value=<%= JSON.stringify(options2[0].Op6).replace(/['"]+/g, '')%>>
+                     <label for="Op26"><%= JSON.stringify(options2[0].Op6).replace(/['"]+/g, '')%></label><br>
+           </div>
+           <div class="exp">
+              <p><%= JSON.stringify(options3[0].Ques).replace(/['"]+/g, '')%></p>
+                  <input type="radio" id="Op31" name="question3" required="required" value=<%= JSON.stringify(options3[0].Op1).replace(/['"]+/g, '')%>>
+                     <label for="Op31"><%= JSON.stringify(options3[0].Op1).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op32" name="question3" value=<%= JSON.stringify(options3[0].Op2).replace(/['"]+/g, '')%>>
+                     <label for="Op32"><%= JSON.stringify(options3[0].Op2).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op33" name="question3" value=<%= JSON.stringify(options3[0].Op3).replace(/['"]+/g, '')%>>
+                     <label for="Op33"><%= JSON.stringify(options3[0].Op3).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op34" name="question3" value=<%= JSON.stringify(options3[0].Op4).replace(/['"]+/g, '')%>>
+                     <label for="Op34"><%= JSON.stringify(options3[0].Op4).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op35" name="question3" value=<%= JSON.stringify(options3[0].Op5).replace(/['"]+/g, '')%>>
+                     <label for="Op35"><%= JSON.stringify(options3[0].Op5).replace(/['"]+/g, '')%></label><br>
+                  <input type="radio" id="Op36" name="question3" value=<%= JSON.stringify(options3[0].Op6).replace(/['"]+/g, '')%>>
+                     <label for="Op36"><%= JSON.stringify(options3[0].Op6).replace(/['"]+/g, '')%></label><br>
+           </div>
+           <div style="margin:15px;  text-align: center;">
+            <input type="submit" value="Submit" class="sm">
+           </div>
+    <!-- </form>
+    <form action="storeartist"> -->
+
+    </form>
+           
+  
+  </body>
+</html>

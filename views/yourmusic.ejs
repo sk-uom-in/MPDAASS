@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/linksSidebar'); %>
+    <title>Your Songs</title>
+    <link rel="stylesheet" href="/stylepopular.css" />
+  </head>
+  <body>
+    <%- include('./partials/menuSidebar'); %>
+    <div class="home_content">
+      <br /><br /><br />
+      <h1 style="text-align: center">YOUR SONGS</h1>
+      <div style="text-align: center"><button class="main__btn" ><a href="./quiz/form">Take Quiz</a></button></div>
+      <br />
+      <br />
+      <div class="table-data">
+        <h3>MOST RECENT QUIZ SUGGESTIONS</h3>
+        <br />
+        <table border="1" class="styled-table" style="text-align: center">
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Name</th>
+            <th style="color: black">Album</th>
+            <th style="color: black">Genre</th>
+            <th style="color: black">Country</th>
+            <th style="color: black">Year</th>
+          </tr>
+
+          <tr>
+            <td><%=table1_song1_data.Name%></td>
+            <td><%=table1_song1_data.Artist_Name%></td>
+            <td><%=table1_song1_data.Album%></td>
+            <td><%=table1_song1_data.Genre%></td>
+            <td><%=table1_song1_data.Country%></td>
+            <td><%=table1_song1_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table1_song2_data.Name%></td>
+            <td><%=table1_song2_data.Artist_Name%></td>
+            <td><%=table1_song2_data.Album%></td>
+            <td><%=table1_song2_data.Genre%></td>
+            <td><%=table1_song2_data.Country%></td>
+            <td><%=table1_song2_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table1_song3_data.Name%></td>
+            <td><%=table1_song3_data.Artist_Name%></td>
+            <td><%=table1_song3_data.Album%></td>
+            <td><%=table1_song3_data.Genre%></td>
+            <td><%=table1_song3_data.Country%></td>
+            <td><%=table1_song3_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table1_song4_data.Name%></td>
+            <td><%=table1_song4_data.Artist_Name%></td>
+            <td><%=table1_song4_data.Album%></td>
+            <td><%=table1_song4_data.Genre%></td>
+            <td><%=table1_song4_data.Country%></td>
+            <td><%=table1_song4_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table1_song5_data.Name%></td>
+            <td><%=table1_song5_data.Artist_Name%></td>
+            <td><%=table1_song5_data.Album%></td>
+            <td><%=table1_song5_data.Genre%></td>
+            <td><%=table1_song5_data.Country%></td>
+            <td><%=table1_song5_data.Year%></td>
+          </tr>
+        </table>
+        <div class="parent">
+          <img
+            src="images/recent.jpg"
+            alt="recent"
+            id="rock"
+            width="411"
+            height="275"
+          />
+        </div>
+        <br /><br />
+        <h3>SECOND LAST QUIZ SUGGESTIONS</h3>
+        <br />
+        <table border="1" class="styled-table">
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Name</th>
+            <th style="color: black">Album</th>
+            <th style="color: black">Genre</th>
+            <th style="color: black">Country</th>
+            <th style="color: black">Year</th>
+          </tr>
+
+          <tr>
+            <td><%=table2_song1_data.Name%></td>
+            <td><%=table2_song1_data.Artist_Name%></td>
+            <td><%=table2_song1_data.Album%></td>
+            <td><%=table2_song1_data.Genre%></td>
+            <td><%=table2_song1_data.Country%></td>
+            <td><%=table2_song1_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table2_song2_data.Name%></td>
+            <td><%=table2_song2_data.Artist_Name%></td>
+            <td><%=table2_song2_data.Album%></td>
+            <td><%=table2_song2_data.Genre%></td>
+            <td><%=table2_song2_data.Country%></td>
+            <td><%=table2_song2_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table2_song3_data.Name%></td>
+            <td><%=table2_song3_data.Artist_Name%></td>
+            <td><%=table2_song3_data.Album%></td>
+            <td><%=table2_song3_data.Genre%></td>
+            <td><%=table2_song3_data.Country%></td>
+            <td><%=table2_song3_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table2_song4_data.Name%></td>
+            <td><%=table2_song4_data.Artist_Name%></td>
+            <td><%=table2_song4_data.Album%></td>
+            <td><%=table2_song4_data.Genre%></td>
+            <td><%=table2_song4_data.Country%></td>
+            <td><%=table2_song4_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table2_song5_data.Name%></td>
+            <td><%=table2_song5_data.Artist_Name%></td>
+            <td><%=table2_song5_data.Album%></td>
+            <td><%=table2_song5_data.Genre%></td>
+            <td><%=table2_song5_data.Country%></td>
+            <td><%=table2_song5_data.Year%></td>
+          </tr>
+        </table>
+        <div class="parent">
+          <img
+            src="images/recent2.jpg"
+            alt="recent2"
+            id="pop"
+            width="411"
+            height="275"
+          />
+        </div>
+        <br /><br />
+        <h3>THIRD LAST QUIZ SUGGESTIONS</h3>
+        <br />
+        <table border="1" class="styled-table">
+          <tr class="active-row">
+            <th style="color: black">Song</th>
+            <th style="color: black">Name</th>
+            <th style="color: black">Album</th>
+            <th style="color: black">Genre</th>
+            <th style="color: black">Country</th>
+            <th style="color: black">Year</th>
+          </tr>
+
+          <tr>
+            <td><%=table3_song1_data.Name%></td>
+            <td><%=table3_song1_data.Artist_Name%></td>
+            <td><%=table3_song1_data.Album%></td>
+            <td><%=table3_song1_data.Genre%></td>
+            <td><%=table3_song1_data.Country%></td>
+            <td><%=table3_song1_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table3_song2_data.Name%></td>
+            <td><%=table3_song2_data.Artist_Name%></td>
+            <td><%=table3_song2_data.Album%></td>
+            <td><%=table3_song2_data.Genre%></td>
+            <td><%=table3_song2_data.Country%></td>
+            <td><%=table3_song2_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table3_song3_data.Name%></td>
+            <td><%=table3_song3_data.Artist_Name%></td>
+            <td><%=table3_song3_data.Album%></td>
+            <td><%=table3_song3_data.Genre%></td>
+            <td><%=table3_song3_data.Country%></td>
+            <td><%=table3_song3_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table3_song4_data.Name%></td>
+            <td><%=table3_song4_data.Artist_Name%></td>
+            <td><%=table3_song4_data.Album%></td>
+            <td><%=table3_song4_data.Genre%></td>
+            <td><%=table3_song4_data.Country%></td>
+            <td><%=table3_song4_data.Year%></td>
+          </tr>
+
+          <tr>
+            <td><%=table3_song5_data.Name%></td>
+            <td><%=table3_song5_data.Artist_Name%></td>
+            <td><%=table3_song5_data.Album%></td>
+            <td><%=table3_song5_data.Genre%></td>
+            <td><%=table3_song5_data.Country%></td>
+            <td><%=table3_song5_data.Year%></td>
+          </tr>
+        </table>
+        <div class="parent">
+          <img
+            src="images/recent3.jpg"
+            alt="recent3"
+            id="hiphop"
+            width="411"
+            height="275"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

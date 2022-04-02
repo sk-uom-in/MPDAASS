@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/linksSidebar'); %>
+    <title>WhatsPopular Page</title>
+    <link rel="stylesheet" href="/stylesettings.css" />
+  </head>
+  <body>
+    <div class="maincard-settings">
+      <aside class="profile-card">
+        <div class="profile-bio">
+          <br />
+          <br />
+          <p>You may want to change your username or email</p>
+        </div>
+
+        <header>
+          <h1>Update your profile</h1>
+          <form method="post" action="/settings/update/<%= user.id %>">
+                <div class="form-group">
+                    <br />
+                    <br />
+                    <h2>
+                        <div>
+                            <label>Username</label>
+                        </div>
+                            <% if (locals.name) { %>
+                              <input
+                              type="text"
+                              name="name"
+                              class="form-control"
+                              placeholder="<%= name %>"
+                              autocomplete="off"
+                              />
+                            <% } else { %>
+                              <input
+                              type="text"
+                              name="name"
+                              class="form-control"
+                              placeholder="<%= user.name %>"
+                              autocomplete="off"
+                              />
+                            <% } %>
+                        </div>
+                    </h2>
+                    <br />
+                    <h2>
+                        <div>
+                            <label>Email</label>
+                        </div>
+                        <div>
+                          <% if (locals.email) { %>
+                            <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="<%= email %>"
+                            autocomplete="off"
+                            />
+                          <% } else { %>
+                            <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="<%= user.email %>"
+                            autocomplete="off"
+                            />
+                          <% } %>
+                        </div>
+                    </h2>
+                    <br />
+                    <h2>
+                        <div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-info" value="Update" />
+                            </div>
+                        </div>
+                    </h2>
+                    <% if (messages.error) { %>
+                      <div class="alert alert-danger" role="alert"><%= messages.error %></div>
+                    <% } %>
+                    <% if (messages.success) { %>
+                      <div class="alert alert-danger" role="alert"><%= messages.success %></div>
+                    <% } %>
+                </div>
+          </form>
+        </header>
+      </aside>
+    </div>
+    <%- include('./partials/menuSidebar'); %>
+  </body>
+</html>

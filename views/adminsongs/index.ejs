@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>User MAINTENANCE Page</title>
+    <link rel="stylesheet" href="/style/admin.css">
+    <title>Songs</title>
+    <%- include('../partials/linksSidebar'); %>
+    
+  </head>
+  <%- include('../partials/menuSidebar'); %>
+  <div class="home_content">
+    <main>
+      <h1 class="header">Admin Area</h1>
+      <div class="insights">
+        <div class="firstdiv">
+          <i class="material-icons">audiotrack</i>
+        <div class="middle">
+        <div class="left">
+          <h1> Music: </h1>
+          <h2> <%= data.length%></h2>
+        
+        </div>
+        </div>
+        </div>
+        <div class="seconddiv">
+          <i class="material-icons">add</i>
+        
+        <div class="middle">
+        <div class="left">
+          
+          <a class="nav-link active" href="/adminsongs/add"><h1> Add Music</h1></a>
+         
+        </div>
+        </div>
+        </div>
+        <div class="thirddiv">
+          <i class="material-icons">person</i>
+        
+        <div class="middle">
+        <div class="left">
+          <a href="/adminusers"><h3> Switch Table</h3></a>
+          <a href="/adminusers"><h1> User Admin </h1></a>
+          
+        </div>
+        </div>
+        </div>
+      </div>
+    <div class="maintable">
+      <h2>LAST 10 ADDED MUSIC LIST</h2>
+      <% if(data.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">SONG</th>
+            <th scope="col">ARTIST</th>
+            <th scope="col">GENRE</th>
+            <th scope="col">RATING</th>
+            <th width="200px">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i = 0; i< 10; i++) { %>
+          <tr>
+            <td><%= data[i].song%></td>
+            <td><%= data[i].name%></td>
+            <td><%= data[i].genre%></td>
+            <td><%= data[i].rating%></td>
+            <td>
+              <button><a
+                class="btn edit"
+                href="../adminsongs/edit/<%=data[i].id%>"
+                > Edit </a
+              ></button>
+              <button><a
+                class="btn btn-danger delete"
+                onclick="alert('Song deleted')"
+                href="../adminsongs/delete/<%=data[i].id%>"
+                >Delete</a
+              ></button>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } %>
+
+       
+        <% if(!data.length) { %>
+        <p class="text-center">No song found!</p>
+        <% } %>
+      </div>
+    
+  </main>
+    </div>
+
+  </body>
+</html>
